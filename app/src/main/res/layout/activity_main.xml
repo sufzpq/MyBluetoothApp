@@ -1,0 +1,100 @@
+<?xml version="1.0" encoding="utf-8"?>
+<RelativeLayout
+    xmlns:android="http://schemas.android.com/apk/res/android"
+    xmlns:tools="http://schemas.android.com/tools"
+    android:id="@+id/activity_main"
+    android:layout_width="match_parent"
+    android:layout_height="match_parent"
+    tools:context="com.example.mybluetoothapp.MainActivity">
+
+    <Button
+        android:text="ON/OFF"
+        android:background="#9999FF"
+        android:layout_width="230dp"
+        android:layout_marginTop="10dp"
+        android:layout_marginBottom="10dp"
+        android:layout_height="wrap_content"
+        android:layout_alignParentTop="true"
+        android:layout_centerInParent="true"
+        android:id="@+id/btnONOFF"/>
+
+    <Button
+        android:text="Enable To Discover Devices"
+        android:layout_marginBottom="10dp"
+        android:background="#9999FF"
+        android:layout_below="@+id/btnONOFF"
+        android:layout_width="230dp"
+        android:layout_height="wrap_content"
+        android:id="@+id/btnDiscoverable_on_off"
+        android:layout_centerInParent="true"
+        android:onClick="btnEnableDisable_Discoverable" />
+
+    <Button
+        android:layout_width="230dp"
+        android:layout_marginBottom="10dp"
+        android:layout_height="wrap_content"
+        android:background="#9999FF"
+        android:layout_below="@+id/btnDiscoverable_on_off"
+        android:layout_centerInParent="true"
+        android:id="@+id/btnFindUnpairedDevices"
+        android:text="Discover"
+        android:onClick="btnDiscover"/>
+
+    <ListView
+        android:layout_marginTop="15dp"
+        android:layout_below="@+id/btnStartConnection"
+        android:layout_width="match_parent"
+        android:layout_height="150dp"
+        android:id="@+id/lvNewDevices"/>
+
+    <Button
+        android:layout_marginTop="0dp"
+        android:background="#9999FF"
+        android:layout_width="230dp"
+        android:layout_height="wrap_content"
+        android:layout_below="@id/btnFindUnpairedDevices"
+        android:layout_centerInParent="true"
+        android:id="@+id/btnStartConnection"
+        android:text="Start Connection" />
+
+    <EditText
+        android:id="@+id/editText"
+        android:layout_width="match_parent"
+        android:layout_height="wrap_content"
+        android:layout_below="@id/lvNewDevices"
+        android:layout_alignParentStart="true"
+        android:layout_alignParentLeft="true"
+        android:layout_marginStart="0dp"
+        android:layout_marginLeft="46dp"
+        android:layout_marginEnd="-6dp"
+        android:layout_marginRight="-6dp"
+        android:layout_toStartOf="@+id/btnSend"
+        android:layout_toLeftOf="@+id/btnSend"
+        android:hint=" Enter Text Here" />
+
+    <Button
+        android:id="@+id/btnSend"
+        android:background="#00CCCC"
+        android:layout_width="131dp"
+        android:layout_height="wrap_content"
+        android:layout_below="@id/lvNewDevices"
+        android:layout_alignParentEnd="true"
+        android:layout_alignParentRight="true"
+        android:layout_marginEnd="6dp"
+        android:layout_marginRight="6dp"
+        android:text="Send" />
+
+    <TextView
+        android:layout_width="wrap_content"
+        android:layout_height="match_parent"
+        android:layout_marginTop="10dp"
+        android:text=" Incoming Messages are displayed here"
+        android:layout_below="@+id/editText"
+        android:layout_alignParentStart="true"
+        android:id="@+id/incomingMessages"
+        android:layout_alignParentEnd="true"
+        android:layout_alignParentLeft="true"
+        android:layout_alignParentRight="true" />
+
+
+</RelativeLayout>
